@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BPL 2026 - Our Teams</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* ======== Global Style ======== */
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+      color: #fff;
+      background: linear-gradient(270deg, #91ff00, #004aad, #00c6ff, #00ffcc);
+      background-size: 1000% 1000%;
+      animation: gradientBG 12s ease infinite;
+    }
+
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    header {
+      text-align: center;
+      padding: 40px 0 10px;
+      position: relative;
+    }
+
+    header img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      margin-bottom: 15px;
+    }
+
+    header h1 {
+      font-size: 2.8rem;
+      margin: 10px 0;
+      font-weight: 700;
+      color: #ffffff;
+      text-shadow: 3px 3px 15px rgba(0, 0, 0, 0.4);
+      position: relative;
+      display: inline-block;
+    }
+
+    header h1::after {
+      content: "🏏";
+      position: absolute;
+      right: -60px;
+      top: 0;
+      font-size: 2.5rem;
+      color: #ffeb3b;
+      transform: rotate(-20deg);
+      animation: batSwing 2s infinite ease-in-out;
+    }
+
+    @keyframes batSwing {
+      0% { transform: rotate(-20deg); }
+      50% { transform: rotate(20deg); }
+      100% { transform: rotate(-20deg); }
+    }
+
+    /* ======== Team Section ======== */
+    .teams-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
+      gap: 35px;
+      padding: 40px;
+      justify-items: center;
+    }
+
+    .team-card {
+      background: rgba(255, 255, 255, 0.12);
+      border-radius: 25px;
+      overflow: hidden;
+      width: 90%;
+      max-width: 520px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(6px);
+      transition: all 0.4s ease;
+    }
+
+    .team-card:hover {
+      transform: translateY(-12px) scale(1.02);
+      box-shadow: 0 18px 45px rgba(0,0,0,0.6);
+    }
+
+    .team-card img {
+      width: 100%;
+      height: 340px;
+      object-fit: cover;
+      border-bottom: 3px solid #ffffff;
+    }
+
+    .team-info {
+      padding: 25px;
+      text-align: center;
+    }
+
+    .team-info h2 {
+      margin: 10px 0;
+      font-size: 2rem;
+      font-weight: 600;
+      color: #fff;
+      letter-spacing: 1px;
+    }
+
+    .team-info p {
+      font-size: 1rem;
+      color: #e8e8e8;
+      line-height: 1.6;
+    }
+
+    /* Details Button */
+    .details-btn {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 10px 25px;
+      border: none;
+      border-radius: 50px;
+      background: linear-gradient(45deg, #ff9100, #ff007f);
+      color: #fff;
+      font-weight: 600;
+      text-decoration: none;
+      transition: 0.3s;
+      box-shadow: 0 0 15px rgba(255, 0, 150, 0.5);
+    }
+
+    .details-btn:hover {
+      transform: scale(1.1);
+      background: linear-gradient(45deg, #ff007f, #ff9100);
+      box-shadow: 0 0 25px rgba(255, 0, 150, 0.7);
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 25px 0;
+      font-size: 1rem;
+      color: #f0f0f0;
+      background: rgba(0, 0, 0, 0.35);
+      margin-top: 40px;
+      letter-spacing: 0.5px;
+    }
+
+    footer span {
+      color: #ffeb3b;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+<!-- ================= BPL HEADER SECTION ================= -->
+<section class="bpl-header text-center py-5">
+  <div class="container">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmYMQvwpMD9pH0HMHjDYKKiuOat2CbxwwGKQ&s" alt="BCB Logo" class="bcb-logo mb-3">
+    <h1 class="bpl-title">Bangladesh Premier League (BPL) 2026</h1>
+    <p class="bpl-subtext">
+      <i class="fas fa-home"></i> <a href="index.html" class="home-link">Home</a>
+    </p>
+  </div>
+</section>
+
+<style>
+.bpl-header {
+  background: linear-gradient(180deg, #001f3f, #002a5c, #001f3f);
+  color: #fff;
+  text-align: center;
+  padding-top: 60px;
+  padding-bottom: 40px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+  border-bottom: 2px solid rgba(255,255,255,0.2);
+}
+
+.bcb-logo {
+  width: 100px;
+  filter: drop-shadow(0 0 15px #00ffcc);
+  animation: glow 3s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from { filter: drop-shadow(0 0 10px #00ffcc); }
+  to { filter: drop-shadow(0 0 25px #00ffcc); }
+}
+
+.bpl-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  text-shadow: 0 0 20px #00ffcc;
+}
+
+.bpl-subtext {
+  font-size: 1.1rem;
+  color: #ffffff;
+  margin-top: 10px;
+}
+
+.bpl-subtext .home-link {
+  color: #00ffcc;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.bpl-subtext .home-link:hover {
+  color: #91ff00;
+}
+</style>
+
+  <!-- ======== TEAMS SECTION ======== -->
+  <section class="teams-container">
+
+    <div class="team-card reveal">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZ1NzIAm5nI38OXpSGiiaSoKRL9NJr2JliJuQDK1oWLdCkcK_2y7AtS2EzGF5iG0dzb1Y&usqp=CAU" alt="Cumilla Victorians">
+      <div class="team-info">
+        <h2>Cumilla Victorians</h2>
+        <p>Known for their tactical brilliance and consistent winning streaks. Cumilla’s strategy always makes them top contenders.</p>
+        <a href="#" class="details-btn">View Details</a>
+      </div>
+    </div>
+
+    <div class="team-card reveal">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpMcDdo4ycLLgpnzVYO81wU2H0xKsUmJBMFw&s" alt="Dhaka Capitals">
+      <div class="team-info">
+        <h2>Dhaka Capitals</h2>
+        <p>The capital’s pride — home to explosive batting and strategic bowling lineups that dominate BPL seasons.</p>
+        <a href="#" class="details-btn">View Details</a>
+      </div>
+    </div>
+
+    <div class="team-card reveal">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROKsIuyHuHr0rLqIbVHKD5R78xheGMX4v0mQ&s" alt="Sylhet Strikers">
+      <div class="team-info">
+        <h2>Sylhet Strikers</h2>
+        <p>A perfect mix of youth and experience, Sylhet Strikers bring energy and innovation to the league every year.</p>
+        <a href="#" class="details-btn">View Details</a>
+      </div>
+    </div>
+
+    <div class="team-card reveal">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRI5vWlgP45YBuxR2RVjRAldWXhqDxJ2aOkGHNljBWMRR27rYML6Pr6S3gsWQ68TzUYJqc&usqp=CAU" alt="Rangpur Riders">
+      <div class="team-info">
+        <h2>Rangpur Riders</h2>
+        <p>Famous for their fearless cricket and power-packed batting lineup — true entertainers of BPL.</p>
+        <a href="#" class="details-btn">View Details</a>
+      </div>
+    </div>
+
+    <div class="team-card reveal">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTi7MIT-Dr07pI2GDbKC6MWhb1ktw8eOuLTiQ5VgBejoKX6skN5qy_9nlhpY4x7YgsGx3Q&usqp=CAU" alt="Chottogram Kings">
+      <div class="team-info">
+        <h2>Chottogram Kings</h2>
+        <p>Representing the port city, the Kings showcase determination, grit, and sportsmanship with every game.</p>
+        <a href="#" class="details-btn">View Details</a>
+      </div>
+    </div>
+
+    <div class="team-card reveal">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUeF2Gl0l-S9T4Ek6sg3v3I4gjA9ZcQ1omySeohBcTfWuonvjWTVNtL9nRiSCXt60R0sk&usqp=CAU" alt="Rajshahi Royals">
+      <div class="team-info">
+        <h2>Rajshahi Royals</h2>
+        <p>True royals of the BPL with balance, discipline, and the ability to surprise opponents at every turn.</p>
+        <a href="#" class="details-btn">View Details</a>
+      </div>
+    </div>
+
+    <div class="team-card reveal">
+      <img src="https://cricket97.com/storage/upload/news/original/483aef62-3034-4f1e-b845-605817f9741e.webp" alt="Khulna Tigers">
+      <div class="team-info">
+        <h2>Khulna Tigers</h2>
+        <p>Strong like tigers — Khulna dominates with top-class all-rounders and fearless gameplay.</p>
+        <a href="#" class="details-btn">View Details</a>
+      </div>
+    </div>
+
+    <div class="team-card reveal">
+      <img src="https://blogs.a-sports.tv/wp-content/uploads/2024/03/Fortune-Barishal-win-BPL-2024.jpg" alt="Fortune Barishal">
+      <div class="team-info">
+        <h2>Fortune Barishal</h2>
+        <p>The pride of Barishal — driven by discipline and passion, always a top contender in every season.</p>
+        <a href="#" class="details-btn">View Details</a>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ======== FOOTER ======== -->
+  <footer>
+    &copy; 2026 <span>Bangladesh Premier League (BPL)</span>. All Rights Reserved.
+  </footer>
+  <!-- 🔼 Scroll To Top Button -->
+<button id="scrollTopBtn" title="Go to top">
+  <i class="fa-solid fa-arrow-up"></i>
+</button>
+
+<!-- 💫 Scroll Animation Script + CSS -->
+<style>
+  /* Scroll To Top Button */
+  #scrollTopBtn {
+    display: none;
+    position: fixed;
+    bottom: 30px;
+    right: 25px;
+    z-index: 999;
+    background: linear-gradient(135deg, #00c6ff, #0072ff);
+    color: white;
+    border: none;
+    outline: none;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    font-size: 18px;
+    cursor: pointer;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
+    transition: all 0.4s ease;
+  }
+  #scrollTopBtn:hover {
+    transform: scale(1.1);
+    background: linear-gradient(135deg, #00ffcc, #00c6ff);
+  }
+
+  /* Animation classes for fade/slide effects */
+  .reveal {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 1s ease;
+  }
+  .reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+  }
+</style>
+
+<script>
+  // 🆙 Scroll to Top Button
+  const scrollBtn = document.getElementById("scrollTopBtn");
+  window.onscroll = function () {
+    if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
+      scrollBtn.style.display = "block";
+    } else {
+      scrollBtn.style.display = "none";
+    }
+  };
+  scrollBtn.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+
+  // 💫 Scroll Animation
+  function revealOnScroll() {
+    const reveals = document.querySelectorAll(".reveal");
+    reveals.forEach((el) => {
+      const windowHeight = window.innerHeight;
+      const revealTop = el.getBoundingClientRect().top;
+      const revealPoint = 120;
+      if (revealTop < windowHeight - revealPoint) {
+        el.classList.add("active");
+      } else {
+        el.classList.remove("active");
+      }
+    });
+  }
+  window.addEventListener("scroll", revealOnScroll);
+</script>
+
+</body>
+</html>
